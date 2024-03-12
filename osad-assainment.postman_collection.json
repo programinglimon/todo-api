@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "b17c6586-1e60-4be2-8fdd-f481f7e2c279",
+		"name": "osad-assainment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27398721"
+	},
+	"item": [
+		{
+			"name": "todo",
+			"item": [
+				{
+					"name": "Create todo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5080/api/v1/todo/create-todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5080",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"create-todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReadTodo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5080/api/v1/todo/read-todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5080",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"read-todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateTodo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5080/api/v1/todo/update-todo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5080",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"update-todo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteTodo",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "token",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5080/api/v1/todo/delete-todo/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5080",
+							"path": [
+								"api",
+								"v1",
+								"todo",
+								"delete-todo",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65f0280dc0c915099327a96d"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "userRegistration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mdlimonhossain546@gmail.com\",\r\n    \"firstName\":\"Limon\",\r\n    \"lastName\":\"Hossain\",\r\n    \"mobile\":\"01765049575\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5080/api/v1/registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5080",
+					"path": [
+						"api",
+						"v1",
+						"registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "userLogin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"mdlimonhossain546@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5080/api/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5080",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "readProfile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5080/api/v1/read-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5080",
+					"path": [
+						"api",
+						"v1",
+						"read-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Profile",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"Lutfor\",\r\n    \"lastName\":\"Hossain\",\r\n    \"mobile\":\"01765049575\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5080/api/v1/rupdate-profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5080",
+					"path": [
+						"api",
+						"v1",
+						"rupdate-profile"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTAzMTIxNjcsImRhdGEiOiJtZGxpbW9uaG9zc2FpbjU0NkBnbWFpbC5jb20iLCJpYXQiOjE3MTAyMjU3Njd9.X6P0L-lgNmih6o_rGlchzAwPYoQ_39G9c4VLUS0IRWQ",
+			"type": "string"
+		}
+	]
+}
